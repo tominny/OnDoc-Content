@@ -76,54 +76,7 @@ The script classifies student feedback into six themes:
 
 Sentences that cannot be confidently categorized are labeled as "Uncategorized".
 
-## Customization
-
-To adapt this script for your own thematic analysis:
-
-1. Modify the predefined themes in the `classify_sentence()` function:
-   ```python
-   prompt = (
-       "Classify the following student evaluation about an AI-based clinical learning tool into exactly one of these themes:\n"
-       "1. Your Custom Theme 1\n"
-       "2. Your Custom Theme 2\n"
-       # Add more themes as needed
-   )
-   ```
-
-2. Update the valid themes list:
-   ```python
-   valid_themes = [
-       "Your Custom Theme 1",
-       "Your Custom Theme 2",
-       # Add more themes as needed
-   ]
-   ```
-
-3. Update the themes dictionary in `process_sentences()`:
-   ```python
-   themes = {
-       "Your Custom Theme 1": {"count": 0, "feedback": []},
-       "Your Custom Theme 2": {"count": 0, "feedback": []},
-       # Add more themes as needed
-       "Uncategorized": {"count": 0, "feedback": []}
-   }
-   ```
-
-4. Optionally modify the visualization colors in the `plot_thematic_distribution()` function.
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```
-Thesen, T., O'Brien, W. N., Stone, S., & Pinto-Powell, R. (2025). Generative AI as the First Patient: 
-New Opportunities for Early Communication and Clinical Reasoning Training in Medicine. Nature Medicine.
-```
-
 ## License
 
 MIT License
 
-## Contact
-
-For questions or support, please contact [youremail@example.com](mailto:youremail@example.com).
